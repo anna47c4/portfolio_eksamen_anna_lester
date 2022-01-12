@@ -185,7 +185,7 @@ valg jeg har truffet, da jeg mindes at Dannie har frarådt
 #forside {
   width: 100%;
   height: 100vh;
-  background-image: url(/img/forside.webp);
+  background-image: url(forside.webp);
   background-size: cover;
   background-position: 22% 45%;
   filter: sepia(100%);

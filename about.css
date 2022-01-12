@@ -247,7 +247,7 @@ h5 {
 .container {
   width: 100%;
   height: 100%;
-  background-image: url(/img/tekstur.webp);
+  background-image: url(/tekstur.webp);
   background-size: cover;
   background-position: 12% 56%;
   margin: 5px;
