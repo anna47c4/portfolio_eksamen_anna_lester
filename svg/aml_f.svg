@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-aml_f);
+      }
+
+      .cls-2 {
+        fill: #707070;
+      }
+
+      .cls-3 {
+        fill: #e0dacd;
+      }
+    </style>
+    <clipPath id="clip-aml_f">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="aml_f" class="cls-1">
+    <rect class="cls-3" width="30" height="30"/>
+    <path id="Path_1" data-name="Path 1" class="cls-2" d="M-9.306-8.5H-8L-4.338,0H-6.066l-.792-1.944h-3.684L-11.31,0H-13Zm1.92,5.256L-8.694-6.7-10.026-3.24ZM-3.354-8.5h2.3L1.218-2.544,3.51-8.5H5.79V0H4.35V-7.056H4.326L1.746,0H.69L-1.89-7.056h-.024V0h-1.44Zm11.076,0H9.234v7.128h3.612V0H7.722Z" transform="translate(15 19)"/>
+  </g>
+</svg>

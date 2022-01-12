@@ -1,0 +1,341 @@
+/* stjerneregel der fjerner default margin, så det ikke konflikter**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh; /*denne her linje har jeg sat ind fordi vi i tema 5 fik kritik for ikke at have noget fastsat der skabte responsivitet, hvis man f.eks. ville zoome**/
+  width: 100%;
+  background-color: rgb(224, 218, 205);
+}
+
+img {
+  width: 100%;
+}
+
+.banner {
+  padding: 2rem;
+}
+/******* navigations indstillinger, mobil & deskotop ***********/
+
+@media (min-width: 600px) {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(224, 218, 205);
+    font-family: "Avenir", sans-serif;
+  }
+
+  li {
+    margin: 3px;
+    padding: 3px;
+  }
+
+  li a,
+  .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: rgba(102, 102, 89, 0.486);
+  }
+
+  li.dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(224, 218, 205);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.363);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgb(189, 183, 183);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+/****************** MOBILE FIRST, index h1, p, mm. indstillinger *****/
+
+/********* Burgermenu til mobile-udgave ******/
+@media (max-width: 600px) {
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-family: "Avenir", sans-serif;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+    font-family: "Avenir", sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(224, 218, 205);
+    font-size: 0.8rem;
+  }
+  li a,
+  .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: rgba(102, 102, 89, 0.486);
+  }
+
+  li.dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(224, 218, 205);
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.7rem;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgb(189, 183, 183);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/************* 'INTRODUKTION' section MOBILE first ************/
+
+#introduktion {
+  display: grid;
+  border-top: 0.3px solid rgba(9, 24, 92, 0.884);
+}
+
+.text {
+  display: grid;
+  color: black;
+  font-family: "Avenir", sans-serif;
+  line-height: 30px;
+}
+
+.h1 {
+  place-self: center;
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-family: "PT serfi", serif;
+}
+
+.p {
+  font-size: 0.9rem;
+  margin: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.212);
+  border-left: 0.3px solid rgba(9, 24, 92, 0.884);
+}
+.collage {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(9, 24, 92, 0.884);
+}
+
+/************* 'YDERLIGERE' section MOBILE first ************/
+
+#yderligere {
+  display: grid;
+}
+
+.port {
+  display: grid;
+  color: black;
+  font-family: "Avenir", sans-serif;
+  line-height: 30px;
+}
+
+.port h2 {
+  place-self: center;
+  font-size: 1.1rem;
+  color: black;
+  margin-top: 15px;
+}
+
+.port p {
+  margin: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.212);
+  border-left: 0.3px solid rgba(9, 24, 92, 0.884);
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 100px;
+  font-family: "Avenir", sans-serif;
+  font-size: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgba(0, 0, 255, 0.541);
+  border-radius: 50% 110% 50% 110%;
+}
+
+/*** animation til links ***/
+.links a:hover {
+  animation-name: hop;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes hop {
+  0% {
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(150%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+/* Ovenstående scale-værdi, blev antaget som en error, men jeg har valgt at beholde den,
+da den giver den animations-effekt, jeg ønskede */
+/************* 'INTRODUKTION', 'YDERLIGERE' section DESKTOP tilpasning ************/
+
+@media (min-width: 600px) {
+  /*#introduktion {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: none;
+  }*/
+
+  #introduktion {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    border-top: none;
+  }
+  .h1,
+  h2 {
+    display: none;
+  }
+  span {
+    font-size: 3.5rem;
+  }
+
+  .p {
+    border-top: none;
+    margin: 20px;
+    padding: 20px;
+    border-left: 0.3px solid rgba(9, 24, 92, 0.884);
+    line-height: 35px;
+  }
+
+  .collage {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .port p {
+    font-size: 1rem;
+    margin: 20px;
+    padding: 20px;
+    line-height: 35px;
+    border-top: none;
+  }
+}
+
+footer p {
+  display: flex;
+  place-content: center;
+  color: black;
+  font-family: "Avenir", sans-serif;
+  font-size: 0.6rem;
+  margin: 5px;
+  padding: 5px;
+}

@@ -1,0 +1,192 @@
+/* stjerneregel der fjerner default margin, så det ikke konflikter**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh; /*denne her linje har jeg sat ind fordi vi i tema 5 fik kritik for ikke at have noget fastsat der skabte responsivitet, hvis man f.eks. ville zoome**/
+  width: 100%;
+  background-color: rgb(224, 218, 205);
+}
+
+img {
+  width: 100%;
+}
+
+/**** banner / logo indstillinger + nav ***/
+.banner {
+  background-color: rgb(224, 218, 205);
+  padding: 2rem;
+}
+
+.banner ul {
+  list-style: none;
+  padding: 0;
+  gap: 5px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Avenir", sans-serif;
+  color: black;
+}
+
+ul a:hover {
+  color: rgb(145, 95, 226);
+}
+
+.logo a {
+  display: flex;
+  place-content: end;
+}
+
+.logo img {
+  width: 10%;
+}
+
+/******* BURGERMENU mobile first *****/
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-family: "Avenir", sans-serif;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+    font-family: "Avenir", sans-serif;
+  }
+
+  .logo img {
+    width: 30%;
+  }
+}
+
+/************ Desktop menu mm. *********/
+
+@media (min-width: 600px) {
+  .banner ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+footer p {
+  display: flex;
+  place-content: center;
+  color: black;
+  font-family: "Avenir", sans-serif;
+  font-size: 0.6rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+/********* TEMA 4 *******/
+#tema4,
+#spil {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.212);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "PT serif", serif;
+  line-height: 30px;
+}
+
+h1,
+h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(9, 24, 92, 0.884);
+}
+
+h3 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+p {
+  font-family: "Avenir", sans-serif;
+  line-height: 30px;
+  padding-bottom: 8px;
+}
+
+#tema4 p {
+  padding-top: 8px;
+}
+
+.link {
+  font-family: "Avenir", sans-serif;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.link a:hover {
+  color: rgb(145, 95, 226);
+  margin: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 800px) {
+  #tema4 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  #tema4 p {
+    grid-column: 1;
+    padding-top: 8px;
+  }
+
+  .spil1,
+  .spil2,
+  .spil3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .spil1 p,
+  .spil2 p,
+  .spil3 p {
+    grid-column: 1;
+  }
+  .re_img,
+  .re_img2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+  }
+}
